@@ -1,0 +1,14 @@
+{
+    "categories": {
+        "0": "productivity",
+        "1": "customer support",
+        "2": "social network"
+    },
+    "demo_page": "https://z-apiwhatsappplugin.bubbleapps.io/version-test",
+    "description": "Api for sending messages to WhatsApp via API z-api.\n\nAPI para envio de mensagens para WhatsApp via API z-api.",
+    "image": "//s3.amazonaws.com/appforest_uf/f1650665924568x529755482189900400/z-api.jpg",
+    "license": "open_source",
+    "link": "https://weblooks.com.br",
+    "name": "Z-API WhatsApp",
+    "plugin_instructions": "It is necessary to send the Token and the ID of the z-api instance in each Action. Obtained from https://www.z-api.io/\n\nWe don't have any connection with the z-api, I just use the API and just to facilitate my projects.\n\n\n\nNecessário enviar em cada Action o Token e o ID da instancia do z-api. Obtido em https://www.z-api.io/.\n\nNão temos qualquer vinculo com a z-api, apenas uso a API e apenas para facilitar meus projetos."
+}

@@ -1,0 +1,792 @@
+{
+    "auth": "none",
+    "calls": {
+        "AAC": {
+            "initialized": true,
+            "method": "post",
+            "name": "Enviar Mensagem",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": ""
+                },
+                "AAU": {
+                    "doc": "Aqui digita a mensagem de texto que deseja enviar.",
+                    "key": "message",
+                    "private": true,
+                    "value": ""
+                },
+                "ABe": {
+                    "doc": "Usado para responder uma mensagem. id original da mensagem, no caso de mensagem enviada por você é o código que vem no seu reponse, caso seja uma mensagem enviada por um contato você vai receber este messageId pelo seu webhook de receive.",
+                    "key": "messageId",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 0,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.AAC",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAC\":{\"caption\":\"Enviar Mensagem\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3ABD2425DAD9F0419A65D6B020234E5E\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"3DD453CB5D9C999B1D1E\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"3DD453CB5D9C999B1D1E\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-messages",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": "",
+                    "visibility": "public"
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": "",
+                    "visibility": "public"
+                }
+            }
+        },
+        "AAZ": {
+            "0": "A",
+            "1": "A",
+            "2": "Y",
+            "initialized": true,
+            "method": "post",
+            "name": "✅ Enviar Imagem",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": ""
+                },
+                "AAU": {
+                    "doc": "Aqui a url da imagem.",
+                    "key": "image",
+                    "private": true,
+                    "value": ""
+                },
+                "AAa": {
+                    "doc": "O titulo da imagem",
+                    "key": "caption",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 1,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.AAZ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAZ\":{\"caption\":\"Enviar Imagem\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3AA4B731AA68C0B0F5DD4E3834774EAF\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"8343E0BC72E3B359070F\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"8343E0BC72E3B359070F\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-image",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "AAc": {
+            "0": "A",
+            "1": "A",
+            "2": "b",
+            "initialized": true,
+            "method": "post",
+            "name": "📁Enviar Documento",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "AAU": {
+                    "doc": "Aqui a url do PDF.",
+                    "key": "document",
+                    "private": true,
+                    "value": "https://eppg.fgv.br/sites/default/files/teste.pdf"
+                },
+                "AAa": {
+                    "doc": "Nome do documento",
+                    "key": "fileName",
+                    "private": true,
+                    "value": "Teste"
+                },
+                "ABP": {
+                    "doc": "Atributo utilizado para responder uma mensagem do chat, basta adicionar o messageId da mensagem que queira responder neste atributo",
+                    "key": "messageId",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABQ": {
+                    "doc": "Nesse atributo um delay é adicionado na mensagem. Você pode decidir entre um range de 1~15 sec, significa quantos segundos ele vai esperar para enviar a próxima mensagem. (Ex \"delayMessage\": 5, ). O delay default caso não seja informado é de 1~3 sec",
+                    "key": "delayMessage",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 3,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.AAc",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAc\":{\"caption\":\"Enviar Documento\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3ABD1E42D59460465266A6244E6D1BF1\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"6806719AD161F2A8F20F\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"6806719AD161F2A8F20F\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-document/[tipodearquivo]",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                },
+                "AAd": {
+                    "doc": "O tipo de arquivo ex: pdf ou doc",
+                    "key": "tipodearquivo",
+                    "private": true,
+                    "value": "pdf"
+                }
+            }
+        },
+        "AAf": {
+            "0": "A",
+            "1": "A",
+            "2": "e",
+            "body": "{\n  \"phone\": \"<phone>\",\n  \"message\": \"<msg>\",\n  \"buttonList\": {\n    \"buttons\": [\n      {\n        \"id\": \"<ID1>\",\n        \"label\": \"<botao1>\"\n      },\n      {\n        \"id\": \"<ID2>\",\n        \"label\": \"<botao2>\"\n      }\n    ]\n  }\n}",
+            "body_params": {
+                "AAh": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "AAi": {
+                    "doc": "Digite a mensagem ou Pergunta .",
+                    "key": "msg",
+                    "private": true,
+                    "value": "teste"
+                },
+                "ABg": {
+                    "doc": "Texto do Botão 1",
+                    "key": "botao1",
+                    "private": true,
+                    "value": "Sim"
+                },
+                "ABj": {
+                    "doc": "ID para identificação do botão.",
+                    "key": "ID1",
+                    "private": true,
+                    "value": "546"
+                },
+                "ABk": {
+                    "doc": "ID para identificação do botão.",
+                    "key": "ID2",
+                    "private": true,
+                    "value": "500"
+                },
+                "ABl": {
+                    "doc": "Texto do Botão 2",
+                    "key": "botao2",
+                    "private": true,
+                    "value": "Não"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "📱Enviar Mensagem e Botões",
+            "publish_as": "action",
+            "rank": 2,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.AAf",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAf\":{\"caption\":\"Enviar Mensagem e Botõe\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3B22F762F728003D2AD442F6A38B1129\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"E426C09894CBC90AF941\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"E426C09894CBC90AF941\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-button-list",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "AAm": {
+            "0": "A",
+            "1": "A",
+            "2": "l",
+            "initialized": true,
+            "method": "post",
+            "name": "🔗Enviar Link",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "AAU": {
+                    "allow_blank": true,
+                    "doc": "Digite uma mensagem para o link",
+                    "key": "message",
+                    "private": true,
+                    "value": "teste"
+                },
+                "AAa": {
+                    "allow_blank": true,
+                    "doc": "Aqui uma url de imagem para o link",
+                    "key": "image",
+                    "private": true,
+                    "value": "https://weblooks.com.br/wp-content/uploads/2021/06/4.-BUSINESS-BUSINESS-IDEA-2-01-1536x1068.png"
+                },
+                "AAn": {
+                    "doc": "Digite a url do link",
+                    "key": "linkUrl",
+                    "private": true,
+                    "value": "https://weblooks.com.br"
+                },
+                "AAo": {
+                    "allow_blank": true,
+                    "doc": "Digite aqui um titulo para o link",
+                    "key": "title",
+                    "private": true,
+                    "value": "Weblooks"
+                },
+                "AAp": {
+                    "allow_blank": true,
+                    "doc": "Aqui digita uma descrição para o link.",
+                    "key": "linkDescription",
+                    "private": true,
+                    "value": "Weblooks"
+                },
+                "ABR": {
+                    "doc": "Atributo utilizado para responder uma mensagem do chat, basta adicionar o messageId da mensagem que queira responder neste atributo",
+                    "key": "messageId",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABS": {
+                    "key": "delayMessage",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 6,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.AAm",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAm\":{\"caption\":\"Enviar Link\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3ABD1F33EA31807427AF6AF80CF68989\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"3C0B60D59036EB5C64CA\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"3C0B60D59036EB5C64CA\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-link",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABF": {
+            "0": "A",
+            "1": "B",
+            "2": "E",
+            "initialized": true,
+            "method": "post",
+            "name": "💽Enviar Audio",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "AAU": {
+                    "doc": "Link do audio ou seu Base64",
+                    "key": "audio",
+                    "private": true,
+                    "value": "https://tuningmania.com.br/autosom/mp3/75%20~%2079%20Hz.MP3"
+                },
+                "ABN": {
+                    "doc": "Atributo utilizado para responder uma mensagem do chat, basta adicionar o messageId da mensagem que queira responder neste atributo",
+                    "key": "messageId",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABO": {
+                    "doc": "Nesse atributo um delay é adicionado na mensagem. Você pode decidir entre um range de 1~15 sec, significa quantos segundos ele vai esperar para enviar a próxima mensagem. (Ex \"delayMessage\": 5, ). O delay default caso não seja informado é de 1~3 sec",
+                    "key": "delayMessage",
+                    "optional": true,
+                    "private": true,
+                    "value": "7"
+                }
+            },
+            "publish_as": "action",
+            "rank": 7,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.ABF",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABF\":{\"caption\":\"Enviar Audio\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3ABD1DECFCCDB0E4C2767A2AD9547FF1\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"D16070757ADC6A3F91B6\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"D16070757ADC6A3F91B6\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-audio",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABJ": {
+            "0": "A",
+            "1": "B",
+            "2": "I",
+            "initialized": true,
+            "method": "post",
+            "name": "🎥Enviar Video",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "AAU": {
+                    "doc": "Link do video ou seu Base64",
+                    "key": "video",
+                    "private": true,
+                    "value": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                },
+                "ABK": {
+                    "doc": "Atributo utilizado para responder uma mensagem do chat, basta adicionar o messageId da mensagem que queira responder neste atributo",
+                    "key": "messageId",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABL": {
+                    "doc": "Nesse atributo um delay é adicionado na mensagem. Você pode decidir entre um range de 1~15 sec, significa quantos segundos ele vai esperar para enviar a próxima mensagem. (Ex \"delayMessage\": 5, ). O delay default caso não seja informado é de 1~3 sec",
+                    "key": "delayMessage",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABM": {
+                    "doc": "Mensagem em que desejar enviar, junto com o vídeo",
+                    "key": "caption",
+                    "optional": true,
+                    "private": true,
+                    "value": "google teste"
+                }
+            },
+            "publish_as": "action",
+            "rank": 8,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.ABJ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABI\":{\"caption\":\"Enviar Video\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3ABD1D0F631130BC282B0E33FA8C1B80\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"C09AE1316290A82B0AF1\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"C09AE1316290A82B0AF1\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-video",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABU": {
+            "0": "A",
+            "1": "B",
+            "2": "T",
+            "initialized": true,
+            "method": "post",
+            "name": "📍Enviar Localização",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "AAU": {
+                    "doc": "Titulo para sua localização ex: Minha casa",
+                    "key": "title",
+                    "private": true,
+                    "value": "Minha casa"
+                },
+                "ABK": {
+                    "doc": "Endereço da localização que esta enviando composto por logradouro, numero, bairro, cidade, UF e CEP, tudo separado por virgula",
+                    "key": "address",
+                    "optional": false,
+                    "private": true,
+                    "value": "Av Marambaia, 125, Jardim Arco Iris, Cotia, SP 06719045"
+                },
+                "ABL": {
+                    "doc": "Latitude da localização enviada",
+                    "key": "latitude",
+                    "optional": false,
+                    "private": true,
+                    "value": "-23.6196802"
+                },
+                "ABM": {
+                    "doc": "Longitude da localização enviada",
+                    "key": "longitude",
+                    "optional": false,
+                    "private": true,
+                    "value": "-46.9359491"
+                },
+                "ABV": {
+                    "doc": "Atributo utilizado para responder uma mensagem do chat, basta adicionar o messageId da mensagem que queira responder neste atributo",
+                    "key": "messageId",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                },
+                "ABW": {
+                    "doc": "Nesse atributo um delay é adicionado na mensagem. Você pode decidir entre um range de 1~15 sec, significa quantos segundos ele vai esperar para enviar a próxima mensagem. (Ex \"delayMessage\": 5, ). O delay default caso não seja informado é de 1~3 sec",
+                    "key": "delayMessage",
+                    "optional": true,
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "publish_as": "action",
+            "rank": 9,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.ABU",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABT\":{\"caption\":\"Enviar Localização\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3ABD20FCCA0840EC85023A6E459C76B3\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"42F3D5FB32894ADEC7D4\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"42F3D5FB32894ADEC7D4\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-location",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABY": {
+            "0": "A",
+            "1": "B",
+            "2": "X",
+            "initialized": true,
+            "method": "delete_method",
+            "name": "❌Apagar Mensagem",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "ABZ": {
+                    "doc": "id original da mensagem, no caso de mensagem enviada por você é o código que vem no seu reponse, caso seja uma mensagem enviada por um contato você vai receber este messageId pelo seu webhook de receive",
+                    "key": "messageId",
+                    "optional": false,
+                    "private": true,
+                    "value": "4A67748FC3F7E8C0C372"
+                },
+                "ABa": {
+                    "doc": "Informe true caso você tenha enviado a mensagem ou false para casos onde seja uma mensagem recebida",
+                    "key": "owner",
+                    "private": true,
+                    "value": "true"
+                }
+            },
+            "publish_as": "action",
+            "rank": 10,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.ABY",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABX\":{\"caption\":\"Apagar Mensagem\",\"fields\":{\"_p_value\":{\"ret_value\":\"boolean\",\"caption\":\"value\",\"sample_value\":true,\"path\":[\"value\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/messages",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABc": {
+            "0": "A",
+            "1": "B",
+            "2": "b",
+            "initialized": true,
+            "method": "post",
+            "name": "✅Ler Mensagem",
+            "params": {
+                "AAT": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "ABZ": {
+                    "doc": "id original da mensagem, no caso de mensagem enviada por você é o código que vem no seu reponse, caso seja uma mensagem enviada por um contato você vai receber este messageId pelo seu webhook de receive",
+                    "key": "messageId",
+                    "optional": false,
+                    "private": true,
+                    "value": "FB01C5426F6E447D3B3415739C4A65CF"
+                }
+            },
+            "publish_as": "action",
+            "rank": 11,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.ABc",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABb\":{\"caption\":\"Ler Mensagem\",\"fields\":{\"_p_value\":{\"ret_value\":\"boolean\",\"caption\":\"value\",\"sample_value\":true,\"path\":[\"value\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/read-message",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ABn": {
+            "0": "A",
+            "1": "B",
+            "2": "m",
+            "body": "{\n    \"phone\": \"<Telefone>\",\n    \"message\": \"<uma mensagem>\",\n    \"title\": \"<Titulo>\",\n    \"footer\": \"<Texto do Footer>\",\n    \"buttonActions\": [\n        {\n            \"id\": \"<IDCALL>\",\n            \"type\": \"CALL\",\n            \"phone\": \"<Telefone call>\",\n            \"label\": \"<Texto Botão>\"\n        },\n        {\n            \"id\": \"<IDURL>\",\n            \"type\": \"URL\",\n            \"url\": \"<Url do Site>\",\n            \"label\": \"<Texto Botao URL>\"\n        },\n        {\n            \"id\": \"<IDREPLY>\",\n            \"type\": \"REPLY\",\n            \"label\": \"<Texto Botao Resposta>\"\n        }\n    ]\n}",
+            "body_params": {
+                "ABo": {
+                    "doc": "Numero do Telefone do destino da mensagem.",
+                    "key": "Telefone",
+                    "private": true,
+                    "value": "5585991203123"
+                },
+                "ABp": {
+                    "doc": "Mensagem de texto simples.",
+                    "key": "uma mensagem",
+                    "private": true,
+                    "value": "Desenvolvimento de sistemas de gerenciamento de dados e aplicativos web. Alta qualidade e rapidez no desenvolvimento."
+                },
+                "ABq": {
+                    "doc": "Titulo da mensagem",
+                    "key": "Titulo",
+                    "private": true,
+                    "value": "Desenvolvimento de Site e Aplicativos Web."
+                },
+                "ABr": {
+                    "doc": "Texto no rodapé da mensagem.",
+                    "key": "Texto do Footer",
+                    "private": true,
+                    "value": "Weblooks"
+                },
+                "ABy": {
+                    "doc": "ID de identificação do primeiro botão de ação -Que e um botão para o link de ligação.",
+                    "key": "IDCALL",
+                    "private": true,
+                    "value": "658"
+                },
+                "ACl": {
+                    "doc": "Telefone que vai receber a ligação quando o destino clicar no link",
+                    "key": "Telefone call",
+                    "private": true,
+                    "value": "5511953523741"
+                },
+                "ACm": {
+                    "doc": "Texto do Botão de ligação. Ex: Ligue-me",
+                    "key": "Texto Botão",
+                    "private": true,
+                    "value": "Ligue-me"
+                },
+                "ACn": {
+                    "doc": "ID do botão de Url. ",
+                    "key": "IDURL",
+                    "private": true,
+                    "value": "548"
+                },
+                "ACo": {
+                    "doc": "Url onde o cliente vai ser enviado quando clicar no botão.",
+                    "key": "Url do Site",
+                    "private": true,
+                    "value": "https://weblooks.com.br"
+                },
+                "ACp": {
+                    "doc": "Texto do link da url",
+                    "key": "Texto Botao URL",
+                    "private": true,
+                    "value": "Ver Site"
+                },
+                "ACq": {
+                    "doc": "ID do botão de resposta de texto simples sem ação.",
+                    "key": "IDREPLY",
+                    "private": true,
+                    "value": "215"
+                },
+                "ACr": {
+                    "doc": "Resposta de texto simples. Ex: Falar com Atendente",
+                    "key": "Texto Botao Resposta",
+                    "private": true,
+                    "value": "Falar com Atendente"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "📋Enviar texto com botões de ação",
+            "publish_as": "action",
+            "rank": 5,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.ABn",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ABn\":{\"caption\":\"Enviar texto com botões de ação\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3B22FB842C2530629D44C2C0CF8D40E4\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"B2B2A653D95506ABBD96\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"B2B2A653D95506ABBD96\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-button-actions",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        },
+        "ACt": {
+            "0": "A",
+            "1": "C",
+            "2": "s",
+            "body": "{\n  \"phone\": \"<phone>\",\n  \"message\": \"<msg>\",\n  \"buttonList\": {\n    \"image\": \"<Link da Imagem>\",\n    \"buttons\": [\n      {\n        \"id\": \"<ID1>\",\n        \"label\": \"<botao1>\"\n      },\n      {\n        \"id\": \"<ID2>\",\n        \"label\": \"<botao2>\"\n      }\n    ]\n  }\n}",
+            "body_params": {
+                "AAh": {
+                    "doc": "Digite o numero do telefone do destinatario no formato 5511900000000  (Codigo do Pais (55) DDD(11) Numero do telefone (900000000).",
+                    "key": "phone",
+                    "private": true,
+                    "value": "558591203123"
+                },
+                "AAi": {
+                    "doc": "Digite a mensagem ou Pergunta .",
+                    "key": "msg",
+                    "private": true,
+                    "value": "teste"
+                },
+                "ADI": {
+                    "doc": "Url do link da imagem",
+                    "key": "Link da Imagem",
+                    "private": true,
+                    "value": "https://weblooks.com.br/wp-content/uploads/2021/06/4.-BUSINESS-BUSINESS-IDEA-2-01-1536x1068.png"
+                },
+                "ADJ": {
+                    "doc": "ID para identificação do botão 1.",
+                    "key": "ID1",
+                    "private": true,
+                    "value": "25"
+                },
+                "ADK": {
+                    "doc": "Texto para o botão 1",
+                    "key": "botao1",
+                    "private": true,
+                    "value": "Sim"
+                },
+                "ADL": {
+                    "doc": "ID para identificação do botão 2.",
+                    "key": "ID2",
+                    "private": true,
+                    "value": "36"
+                },
+                "ADM": {
+                    "doc": "Texto para o botão 2",
+                    "key": "botao2",
+                    "private": true,
+                    "value": "Não"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "📲Enviar Botões Com Imagem",
+            "publish_as": "action",
+            "rank": 4,
+            "ret_value": "api.1650664582875x224851870584930300.plugin_api.ACt",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ACs\":{\"caption\":\"Enviar Botões Com Imagem\",\"fields\":{\"_p_zaapId\":{\"ret_value\":\"text\",\"caption\":\"zaapId\",\"sample_value\":\"3B22FC8D753360DE5D0BC68FA68F1731\",\"path\":[\"zaapId\"]},\"_p_messageId\":{\"ret_value\":\"text\",\"caption\":\"messageId\",\"sample_value\":\"13E849193A9049A1770E\",\"path\":[\"messageId\"]},\"_p_id\":{\"ret_value\":\"text\",\"caption\":\"id\",\"sample_value\":\"13E849193A9049A1770E\",\"path\":[\"id\"]}}}}",
+            "url": "https://api.z-api.io/instances/[instances]/token/[token]/send-button-list",
+            "url_params": {
+                "AAI": {
+                    "doc": "Token da instancia z-api",
+                    "key": "token",
+                    "private": true,
+                    "value": ""
+                },
+                "AAR": {
+                    "doc": "Digite o ID da instancia z-api",
+                    "key": "instances",
+                    "private": true,
+                    "value": ""
+                }
+            }
+        }
+    },
+    "human": "🧩Z-API",
+    "shared_headers": {
+        "ABH": {
+            "key": "Content-Type",
+            "private": true,
+            "value": "application/json",
+            "visibility": "hidden"
+        }
+    }
+}
